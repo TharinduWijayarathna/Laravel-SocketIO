@@ -17,15 +17,15 @@ This guide will walk you through setting up Laravel with Soketi, a fast, scalabl
 
 ## Step 1: Install Laravel
 
-1. Create a new Laravel project:
+1. Clone the Laravel project:
    ```bash
-   composer create-project laravel/laravel laravel-soketi-example
-   cd laravel-soketi-example
+   git clone https://github.com/TharinduWijayarathna/Laravel-SocketIO.git
+   cd Laravel-SocketIO
    ```
 
-2. Install Laravel Echo and Pusher:
+2. Install Node Modules:
    ```bash
-   npm install --save-dev laravel-echo pusher-js
+   npm i
    ```
 
 ---
@@ -57,29 +57,6 @@ This guide will walk you through setting up Laravel with Soketi, a fast, scalabl
    PUSHER_SCHEME=http
    PUSHER_APP_CLUSTER=mt1
    ```
-
-2. Install Laravel broadcasting configuration:
-   ```bash
-   php artisan vendor:publish --tag=laravel-echo
-   ```
-
-3. Update the `config/broadcasting.php` file:
-   ```php
-   'pusher' => [
-       'driver' => 'pusher',
-       'key' => env('PUSHER_APP_KEY'),
-       'secret' => env('PUSHER_APP_SECRET'),
-       'app_id' => env('PUSHER_APP_ID'),
-       'options' => [
-           'host' => env('PUSHER_HOST'),
-           'port' => env('PUSHER_PORT'),
-           'scheme' => env('PUSHER_SCHEME'),
-           'cluster' => env('PUSHER_APP_CLUSTER'),
-           'useTLS' => false,
-       ],
-   ],
-   ```
-
 ---
 
 ## Step 4: Run Laravel and Soketi
