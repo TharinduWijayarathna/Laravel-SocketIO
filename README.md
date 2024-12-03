@@ -15,7 +15,7 @@ This guide will walk you through setting up Laravel with Soketi, a fast, scalabl
 
 ---
 
-## Step 1: Install Laravel
+## Step 1: Setup Laravel Project
 
 1. Clone the Laravel project:
    ```bash
